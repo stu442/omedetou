@@ -14,7 +14,7 @@ export const Form = () => {
 
   return (
     <Container>
-      <FormContainer as="form" onSubmit={handleSubmit}>
+      <FormContainer onSubmit={handleSubmit}>
         <NameQuestionText>What's your name?</NameQuestionText>
         <input name="name" />
         <OKButton>OK</OKButton>
@@ -33,7 +33,7 @@ const Container = styled.section`
   background-color: #7bed9f;
 `;
 
-const FormContainer = styled.div`
+const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
