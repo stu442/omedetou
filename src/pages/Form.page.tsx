@@ -2,10 +2,10 @@ import { FormEventHandler } from "react";
 import styled from "styled-components";
 
 export const Form = () => {
-  const handleSubmit: FormEventHandler = e => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault();
 
-    const name = new FormData(e.target as HTMLFormElement).get("name");
+    const name = new FormData(e.currentTarget).get("name");
 
     if (name && typeof name === "string") {
       window.location.assign(`?name=${name}`);
@@ -16,7 +16,7 @@ export const Form = () => {
     <Container>
       <FormContainer onSubmit={handleSubmit}>
         <NameQuestionText>What's your name?</NameQuestionText>
-        <input name="name" />
+        <input name="name" autoFocus />
         <OKButton>OK</OKButton>
       </FormContainer>
     </Container>
