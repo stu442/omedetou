@@ -51,7 +51,7 @@ const OmedetouText = styled.span`
   word-break: keep-all;
 
   color: white;
-  font-size: 5vw;
+  font-size: 5rem;
   text-shadow: 2px 2px 2px black;
 
   @media screen and (max-width: 768px) {
